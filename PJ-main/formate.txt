@@ -1,0 +1,302 @@
+----------------------------------------
+1  : Disease API
+
+GET : http://127.0.0.1:8000/disease/
+
+POST : http://127.0.0.1:8000/disease/
+
+PATCH : http://127.0.0.1:8000/disease/pass ID/
+
+DELETE : http://127.0.0.1:8000/disease/pass ID/
+
+Formate : 
+
+{
+  "disease_name": "Typhoid",
+  "image":"pass image in file formate",
+  "description": "Typhoid is a bacterial infection.",
+  "updatedAt":"update time change time"        Note : Create Time updatedAt field null
+}
+
+
+----------------------------------------
+
+2  : Medicine API
+
+GET : http://127.0.0.1:8000/medicine/
+
+POST : http://127.0.0.1:8000/medicine/
+
+PATCH : http://127.0.0.1:8000/medicine/pass ID/
+
+DELETE : http://127.0.0.1:8000/medicine/pass ID/
+
+Formate : 
+
+
+{
+  "disease_data": 1,      <-- pass disease table data (id)
+  "medicine_name": "Crocin",
+  "price": 50,
+  "description": "Used to reduce fever and pain.",
+  "image1":"pass image in file formate",
+  "image2":"pass image in file formate",
+  "image3":"pass image in file formate",
+  "how_work": "It works by blocking prostaglandins.",
+  "inside": "Paracetamol, Acetaminophen",
+  "updateAt":"update time change time"           Note : Create Time updatedAt field null
+}
+
+----------------------------------------
+
+3  : Health Parameters API
+
+GET : http://127.0.0.1:8000/health_parameters/
+
+POST : http://127.0.0.1:8000/health_parameters/
+
+PATCH : http://127.0.0.1:8000/health_parameters/pass ID/
+
+DELETE : http://127.0.0.1:8000/health_parameters/pass ID/
+
+Formate : 
+
+{
+  "disease_data": 1,        <-- pass disease table data (id)
+  "parameter_name": "PH1"
+  
+}
+
+
+----------------------------------------
+
+4  : Sub Health Parameters API
+
+GET : http://127.0.0.1:8000/sub_health_parameters/
+
+POST : http://127.0.0.1:8000/sub_health_parameters/
+
+PATCH : http://127.0.0.1:8000/sub_health_parameters/pass ID/
+
+DELETE : http://127.0.0.1:8000/sub_health_parameters/pass ID/
+
+Formate : 
+
+
+{
+  "disease_data": 1,          <-- pass disease table data (id)
+  "parameter_data": 1,        <-- pass healthparameter table data (id)
+  "sub_parameter_name": ["Blood Pressure", "Heart Rate", "Temperature"],
+  "updateAt":"update time change time"           Note : Create Time updatedAt field null
+ 
+}
+
+----------------------------------------
+
+5  : Ask To Expert API
+
+GET : http://127.0.0.1:8000/ask_to_expert/
+
+POST : http://127.0.0.1:8000/ask_to_expert/
+
+PATCH : http://127.0.0.1:8000/ask_to_expert/pass ID/
+
+DELETE : http://127.0.0.1:8000/ask_to_expert/pass ID/
+
+Formate : 
+
+{
+  "name": "Disha",
+  "email": "agresha0207@gmail.com",
+  "mobile_no": "9876543210",
+  "age": 28,
+  "weight": 90,
+  "gender": "Female",
+  "blood_group": "O-",
+  "health_condition": "no",
+  "disease": 1,                   <-- pass disease table data (id)
+  "healthparameter": [1, 2, 3],   <-- pass healthparameter table data (id) (multiple)
+  "subhealthparameter": ["BMI", "Cholesterol", "Blood Sugar"],
+  "dietary": "Vegetarian",
+  "allergies": "Shellfish",
+  "exercise": "Sedentary",
+  "sleep": "6-8",
+  "stress_level": "Medium",
+  "productId": "ABC123",
+  "updateAt":"update time change time"                   Note : Create Time updatedAt field null
+}
+
+
+
+----------------------------------------
+
+6  : Order API
+
+GET : http://127.0.0.1:8000/order/
+
+POST : http://127.0.0.1:8000/order/
+
+PATCH : http://127.0.0.1:8000/order/pass ID/
+
+DELETE : http://127.0.0.1:8000/order/pass ID/
+
+Formate : 
+
+
+
+{
+  "user_data": 1,             <-- pass user table data (user_id)
+  "product_data": 1,          <-- pass medicine table data (id)
+  "status": "Pending",
+  "address": "Paldi , Ramji mandir, Ahmedabad, 380007",
+  "mobile": "8320179630",
+  "delivery_time_preference": "Evening Slot - 5:00 PM - 8:00 PM",
+  "delivery_time": "10:00",
+  "updateAt":"update time change time"                   Note : Create Time updatedAt field null
+ 
+}
+
+
+-----------------------------------
+
+7. User API
+
+GET : http://127.0.0.1:8000/user_data/
+
+POST : http://127.0.0.1:8000/user_data/
+
+PATCH : http://127.0.0.1:8000/user_data/pass user_id/
+
+DELETE : http://127.0.0.1:8000/user_data/pass user_id/
+
+Formate : 
+
+ {
+    "user_id": "1qJI8REJr4",          
+    "name": "vidhi",
+    "membership": false,
+    "email": "v@gmail.com",
+    "updateAt": "update time change time"                   Note : Create Time updatedAt field null
+
+}
+
+-------------------------------------
+
+8. advertisement API
+
+GET : http://127.0.0.1:8000/ad/
+
+POST : http://127.0.0.1:8000/ad/
+
+PATCH : http://127.0.0.1:8000/ad/pass ID/
+
+DELETE : http://127.0.0.1:8000/ad/pass ID/
+
+Formate : 
+{
+    "image": "pass image in file formate",  
+    "updatedAt": "update time change time"                   Note : Create Time updatedAt field null
+}
+
+-------------------------------------
+
+9. Contact Us API
+
+
+GET : http://127.0.0.1:8000/contact_us/
+
+POST : http://127.0.0.1:8000/contact_us/
+
+PATCH : http://127.0.0.1:8000/contact_us/pass ID/
+
+DELETE : http://127.0.0.1:8000/contact_us/pass ID/
+
+Formate : 
+{
+    "user_data": "8REJr433",                    <-- pass user table data (user_id)
+    "messages": [{"message": "Hi there!"}],
+    "read": [1, 2, 3]                      
+}
+
+-------------------------------------
+
+
+10. plan API
+
+GET : http://127.0.0.1:8000/plan/
+
+POST : http://127.0.0.1:8000/plan/
+
+PATCH : http://127.0.0.1:8000/plan/pass ID/
+
+DELETE : http://127.0.0.1:8000/plan/pass ID/
+
+Formate : 
+
+{
+    "title": "Plan C",
+    "description": "A detailed description of Plan C.",
+    "duration": "6 months",
+    "price": 2000,
+    "disease_data": 1,                          <-- pass disease table data (id)
+    "product_data": 1                           <-- pass medicine table data (id)
+}
+
+
+-------------------------------------
+
+11. Membership API
+
+GET : http://127.0.0.1:8000/membership/
+
+POST : http://127.0.0.1:8000/membership/
+
+PATCH : http://127.0.0.1:8000/membership/pass ID/
+
+DELETE : http://127.0.0.1:8000/membership/pass ID/
+
+Formate : 
+{
+    "user_data":"abcdds",               <-- pass disease table data (user_id)
+    "plan_data": 2,                     <-- pass plan table data (id)
+    "image": "pass image in file formate",                
+    "paymentmethod": "Credit Card", 
+    "paymentDate": "2025-06-14",  
+    "endDate": "2026-06-14",      
+    "status": "Active"           
+}
+
+-------------------------------------
+
+
+12. Admin Login
+
+POST: https://theaura.pythonanywhere.com/admin_login/
+
+Formate :
+
+{
+  "email": "admin@example.com",
+  "password": "135790"
+}
+
+
+
+-------------------------------------
+
+Django administration
+username : pjayurveda
+password : maxgen@2014
+
+#====================================================
+
+13. User Login API:-
+
+https://pjayurveda.pythonanywhere.com/user_login/
+
+POST Formate :
+
+{
+    "email": "ok@gmail.com",        <- pass registered email
+    "password": "ok123"
+} 
